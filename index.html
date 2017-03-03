@@ -10,28 +10,36 @@
     <script src="js/main.js"></script>
   </head>
   <body>
-    <h1>Tic Tac Toe</h1>
-    <table id="gametable">
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </table>
+    <!-- <div class="wrapper"> -->
 
-    <div class="buttons">
-      <button id="start">Start</button>
-    </div>
+      <h1>Tic Tac Toe</h1>
+
+      <table id="gametable">
+        <tr>
+          <!-- tr = table rows -->
+          <td></td>
+          <td></td>
+          <td></td>
+          <!-- td = table data (cells)  -->
+        </tr>
+          <!-- In other words, there are 3 rows and each with 3 cells, thus forming a 3x3 squares -->
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+
+      <div class="buttons">
+        <button id="start">Start</button>
+      </div>
+
+    <!-- </div> -->
 
     <div class="record">
       <p>Winning Record</p>
@@ -39,7 +47,7 @@
       <p id="recordO">O = 0</p>
     </div>
 
-    <p class="speech">Beat me if you can.</p>
+    <p class="speech">Play on your own.</p>
     <img src="images/dancing_man.gif">
 
   </body>

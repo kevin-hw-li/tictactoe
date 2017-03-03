@@ -39,6 +39,8 @@
 //     <div class="block" col="2"><p>A</p></div>
 //   </div> -->
 
+
+// alert(this.parentNode.rowIndex.toString() + ', ' + this.cellIndex)
 // setTimeout(AI, 2000);
 
 // var board = [

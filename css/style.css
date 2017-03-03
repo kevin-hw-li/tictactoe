@@ -1,6 +1,14 @@
 body {
   background: #C63D0F;
+  user-select: none;
 }
+
+/*.wrapper {
+  display: block;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}*/
 
 h1 {
   display: block;
@@ -39,7 +47,7 @@ td:hover {
   display: block;
   margin: 0 auto;
   width: 75px;
-  height: 20px;
+  height: 10px;
 }
 
 button {
@@ -72,7 +80,7 @@ p.speech {
   border: 8px solid #3B3738;
   border-radius: 30px;
   box-shadow: 2px 2px 2px;
-  float:right;
+  float: right;
 }
 
 p.speech:before {

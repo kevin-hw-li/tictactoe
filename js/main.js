@@ -24,20 +24,20 @@ $(document).ready(function(){
   var recordOfX = 0; // Winning record of the 'X' player.
   var recordOfO = 0; // Winning record of the 'O' player.
   var $row = $('tr'); // Refer to the table rows.
-  var $dataCell = $('td'); // Refer to the table cells.
+  var $dataCell = $('td'); // Refer to the table cells (the squares).
 
 
   $dataCell.on('click', function () {
 
     if ($(this).text() !== '') {
       $speech.text('This spot is already taken.');
-      // If the square clicked on is not blank, the speech bubble will display a message saying the spot is taken.
+      // If the square clicked on is not an empty string, the speech bubble will display a message saying the spot is taken.
     }
 
     else if (counter !== null && counter % 2 === 0){
       $(this).text('X');
       counter += 1;
-      $speech.text('Play on your own.');
+      $speech.text('Have fun.');
       winLostDraw('XXX');
       // If the counter value is not null, and is dividable by 2 (an even number):
       // the function will access this table cell element and change the text inside as 'X'. Thus inputting a 'X' into the square;
@@ -46,10 +46,10 @@ $(document).ready(function(){
       // check the game status on each click. this function will be discussed below.
     }
 
-    else if (counter !== null && counter % 2 !== 0){
+    else if (counter !== null){
       $(this).text('O');
       counter += 1;
-      $speech.text('Play on your own.');
+      $speech.text('Have fun.');
       winLostDraw('OOO');
       // Same as above. The Circle player takes turn when the counter value is an odd number.
     }
@@ -59,7 +59,7 @@ $(document).ready(function(){
   function winLostDraw(triple) {
     // This function takes a single argument of either 'XXX' or 'OOO'.
 
-    if (getRow(0) === triple // eg. If the first row returns a value which is the same as the argument
+    if (getRow(0) === triple // eg. If the squares in the first row returns a value which is the same as the argument
         || getRow(1) === triple
         || getRow(2) === triple
         || getColumn(0) === triple
@@ -111,6 +111,7 @@ $(document).ready(function(){
     return result;
     // This function will loop through all the table rows and return the value of cells with index y in each row.
     // innerText works instead of text() because the .cells method is javascript and not jQuery?
+    // Could possibly categorize the cells in classes to avoid loops.
   }
 
   function getBackSlash() {
@@ -134,12 +135,12 @@ $(document).ready(function(){
   }
 
   $start.on('click', function () {
-      $dataCell.text(''); // Clear all the inputs
-      counter = 0; // Set counter to 0
-      $start.text('Restart'); // After the first click it will become a 'Restart' button
-      $('.buttons').css('width', '90px'); // Just some css positioning of the button after it changes to 'Restart'
-      $img.attr('src', 'images/dancing_man.gif') // Change image back to the original one after a win or loss or a draw
-      $speech.text('Play on your own.'); // Change the text in the speech bubble
+    $dataCell.text(''); // Clear all the inputs
+    counter = 0; // Set counter to 0
+    $start.text('Restart'); // After the first click it will become a 'Restart' button
+    $('.buttons').css('width', '90px'); // Just some css positioning of the button after it changes to 'Restart'
+    $img.attr('src', 'images/dancing_man.gif') // Change image back to the original one after a win or loss or a draw
+    $speech.text('Have fun.'); // Change the text in the speech bubble
   })
 
   function recordWinOfX() {

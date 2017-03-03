@@ -2,6 +2,9 @@
 
 This is a traditional Tic Tac Toe game with 3x3 squares.
 
+### LANGUAGES USED
+
+HTML, CSS, Javascript / jQuery
 
 ### GAME FEATURES AND DESCRIPTION
 
@@ -18,5 +21,6 @@ Restart the game whenever you want by pressing the 'Restart' button.
 Winning record of each side is shown on the left.
 
 [Press here to access the game](https://megatalt.github.io/tictactoe/)
+
 
 #### Kevin

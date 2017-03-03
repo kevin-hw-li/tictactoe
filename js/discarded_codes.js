@@ -4,6 +4,37 @@
 // AI will need some if statements in regards to Player's input, as well as accessing DOM and change html elements
 // Xanda's advice -> make the game works first before developing the AI.
 
+
+function AI() {
+
+}
+
+var $row = $('tr');
+
+function getRow(x) {
+  var result = ''
+  result = $row.eq(x).children().text();
+  return result;
+}
+
+function getColumn(y) {
+  var result = ''
+  for (x = 0; x < $row.length; x++) {
+    result += $row[x].cells[y].innerText;
+  }
+  return result;
+}
+
+function takeTheWin(i, double) {
+  double = 'OO';
+  if (getRow(i) === double) {
+    $row.eq(i).children().text('O');
+  }
+  else if (getColumn(i) === double) {
+    $row[PROBLEM].cells[i].innerText = 'O';
+  }
+}
+
 // <!-- <div class="gameboard">
 //   <div class="row" row="0">
 //     <div class="block row1 col1 diag1" id="upper_left" col="0"><p>A</p></div>

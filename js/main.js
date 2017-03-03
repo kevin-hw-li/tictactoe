@@ -39,9 +39,9 @@ $(document).ready(function(){
       counter += 1;
       $speech.text('Play on your own.');
       winLostDraw('XXX');
-      // If the counter value is not null, and is dividable by 2 (even number):
+      // If the counter value is not null, and is dividable by 2 (an even number):
       // the function will access this table cell element and change the text inside as 'X'. Thus inputting a 'X' into the square;
-      // it will add 1 to the counter which means the value of the counter will become an odd number, and the next click will not be a 'X'.
+      // it will add 1 to the counter which means the value of the counter will become an odd number after each click, and the next click will not be a 'X'.
       // the third line is just changing the speech bubble back to its original state in case it is saying the spot is taken.
       // check the game status on each click. this function will be discussed below.
     }

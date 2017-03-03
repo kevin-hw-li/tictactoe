@@ -7,9 +7,8 @@ This is a traditional Tic Tac Toe game with 3x3 squares.
 
 Press 'Start' to start the game.
 
-The 'X' player begins first, followed by 'O'.
+The 'X' player begins first, followed by 'O'. Each side takes turns.
 
-Each side takes turns.
 The side who forms a line of three consecutive markings wins.
 
 The little man at the corner will give you feedback on the game status.

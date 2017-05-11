@@ -20,7 +20,7 @@ Restart the game whenever you want by pressing the 'Restart' button.
 
 Winning record of each side is shown on the left.
 
-[Press here to access the game](https://megatalt.github.io/tictactoe/)
+[Press here to access the game](https://kevin-hw-li.github.io/tictactoe/)
 
 
 #### Kevin
